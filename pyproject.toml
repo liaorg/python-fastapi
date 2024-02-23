@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "python-fastapi"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+packages = [
+    { include = "*", from = "src"}
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^7.2.1"
+fastapi = "^0.108.0"
+uvicorn = "^0.25.0"
+pyyaml = "^6.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+include = ["src"]
+exclude = [
+    "**/__pycache__",
+]

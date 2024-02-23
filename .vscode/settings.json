@@ -1,0 +1,62 @@
+{
+  "window.zoomLevel": 0.1,
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.sideBar.location": "left",
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#6b3a85"
+  },
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "editor.comments.insertSpace": true,
+  "editor.tabSize": 4,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.fontFamily": "Cascadia Code PL, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 17,
+  "editor.rulers": [110, 110],
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 105,
+  "editor.guides.bracketPairs": true,
+  //   "editor.semanticTokenColorCustomizations": {
+  //     "[One Dark Pro]": {
+  //       "enabled": true,
+  //       "rules": {
+  //         "magicFunction:python": "#ee0000",
+  //         "function.declaration:python": "#990000",
+  //         "*.decorator:python": "#0000dd",
+  //         "*.typeHint:python": "#5500aa",
+  //         "*.typeHintComment:python": "#aaaaaa"
+  //       }
+  //     }
+  //   },
+  "files.eol": "\n",
+  "search.exclude": {
+    "**/.conda": true,
+    "**/.git": true,
+    "**/dist": true,
+    "**/__pycache__": true
+  },
+  "files.exclude": {
+    "**/.conda": true,
+    "**/.git": true,
+    "**/dist": true,
+    "**/__pycache__": true
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.extraPaths": ["./src"],
+  "black-formatter.args": ["--skip-string-normalization"]
+}

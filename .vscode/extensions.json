@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "ms-ceintl.vscode-language-pack-zh-hans",
+    "eamodio.gitlens",
+    "christian-kohler.path-intellisense",
+    "alefragnani.bookmarks",
+    "vscode-icons-team.vscode-icons",
+    "ms-vscode-remote.vscode-remote-extensionpack",
+    "ms-vscode.notepadplusplus-keybindings",
+    "mgmcdermott.vscode-language-babel",
+    "zhuangtongfa.material-theme",
+    "ms-vscode.hexeditor",
+    "ms-python.python",
+    "ms-python.black-formatter",
+    "tamasfe.even-better-toml",
+    "aaron-bond.better-comments"
+  ]
+}
