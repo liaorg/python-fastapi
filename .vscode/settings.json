@@ -56,7 +56,7 @@
   },
   "python.analysis.autoImportCompletions": true,
   "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.completeFunctionParens": true,
+  //   "python.analysis.completeFunctionParens": true,
   "python.analysis.extraPaths": ["./src"],
   "black-formatter.args": ["--skip-string-normalization"]
 }

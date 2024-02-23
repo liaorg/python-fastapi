@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse, Response
 from typing import Union
 
 
-def res_ok(*, data: Union[list, dict, str, None] = None) -> Response:
+def res_ok(*, data: Union[list, dict, str, int, None] = None) -> Response:
     return JSONResponse(
         status_code=status.HTTP_200_OK,
         content={
