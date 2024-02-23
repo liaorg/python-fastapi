@@ -70,12 +70,12 @@ poetry --version
 基本操作：
 升级：`poetry self update`
 换源：
-"""
+```
 豆瓣 https://pypi.doubanio.com/simple/
 网易 https://mirrors.163.com/pypi/simple/
 阿里云 https://mirrors.aliyun.com/pypi/simple/
 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
-"""
+```
 pip 切换安装源:
 
 ```sh
@@ -135,7 +135,7 @@ poetry run python main.py
 ## 2 clone 本项目到本地
 
 ```bash
-git clone git@github.com:hansenz42/python_scaffold.git
+git clone git@github.com:liaorg/python-fastapi.git
 ```
 
 ## 3 （可选）替换 poetry 的 python 版本
