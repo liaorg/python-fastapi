@@ -32,6 +32,8 @@ bash Miniconda3-latest-Linux-x86_64.sh
 # 查看激活版本
 conda env list
 # 创建 conda 虚拟环境
+# 搜索安装包
+conda search 包名
 conda create -n env_name python=3.12
 conda create -n -prefix="D:\\my_python\\envs\\my_py_env" env_name python=3.12
 # 激活虚拟环境
@@ -40,6 +42,11 @@ conda activate env_name
 conda deactivate
 # 删除环境
 conda remove -n env_name --all
+# 换源
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+conda config --set show_channel_urls yes
 ```
 
 ## 1 安装 poetry 依赖管理器：
@@ -70,12 +77,14 @@ poetry --version
 基本操作：
 升级：`poetry self update`
 换源：
+
 ```
 豆瓣 https://pypi.doubanio.com/simple/
 网易 https://mirrors.163.com/pypi/simple/
 阿里云 https://mirrors.aliyun.com/pypi/simple/
 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
+
 pip 切换安装源:
 
 ```sh
