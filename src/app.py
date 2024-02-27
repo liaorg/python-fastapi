@@ -1,5 +1,6 @@
-from route.demo import router as demo_router
-import asyncio
+import errors
+import middleware
+
 
 from fastapi import FastAPI
 from fastapi import Request
@@ -11,15 +12,26 @@ from component.ConfigManager import config_manager
 
 # 启动 FastAPI http 服务器
 from component.LogManager import log_manager
+from router import RegisterRouterList
 
 logger = log_manager.get_logger("app")
 
-app = FastAPI()
+app = FastAPI(redoc_url=None, title="FastAPI学习")
+# 全局依赖项
+# app = FastAPI(dependencies=[Depends(get_query_token)])
+# 路由器的依赖项最先执行，然后是装饰器中的 dependencies，再然后是普通的参数依赖项
+
+# 注册自定义错误处理器
+errors.registerCustomErrorHandle(app)
+
+# 注册中间件
+middleware.registerMiddlewareHandle(app)
 
 logger.info(f"服务已启动：version: {config_manager.get_value(['version'])}")
 
-# 引入路由
-app.include_router(demo_router, prefix="/api", tags=["demo"])
+# 加载路由
+for item in RegisterRouterList:
+    app.include_router(item.router, prefix="/api", tags=["demo"])
 
 
 @app.on_event("startup")

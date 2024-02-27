@@ -5,14 +5,23 @@ from common.response import res_ok
 router = APIRouter()
 
 
-@router.get("/demo")
+router = APIRouter(
+    prefix="/demo",
+    tags=["demo"],
+    # 依赖项
+    # dependencies=[Depends(get_token_header)],
+    responses={404: {"description": "Not found"}},
+)
+
+
+@router.get("/")
 def test():
     return res_ok(data='test')
 
 
 # 有类型的路径参数，如  id: int
 # 查询参数，可选的可设置为 None，如 q: str | None = None
-@router.get("/demo/{id}")
+@router.get("/{id}")
 def test_id(id: int, q: str | None = None):
     data = id
     if q:
@@ -29,7 +38,7 @@ class Item(BaseModel):
 
 
 # 请求体 + 路径参数 + 查询参数
-@router.put("/demo/{item_id}")
+@router.put("/{item_id}")
 async def update_item(
     item_id: int,
     q: str | None = Query(
