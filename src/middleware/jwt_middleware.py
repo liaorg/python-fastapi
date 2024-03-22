@@ -1,13 +1,11 @@
+from config import appSettings
+from custom_types import JwtData, response
 from fastapi import Request, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware, RequestResponseEndpoint
 from starlette.responses import Response
-
-from custom_types import response, JwtData
 from utils import JwtManageUtil
-from config import appSettings
-
 
 # 后期做配置，这里临时演示
 # secret_key = "abcd12345@abcdef"

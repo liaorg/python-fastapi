@@ -1,18 +1,15 @@
 import errors
 import middleware
-
-
-from fastapi import FastAPI
-from fastapi import Request
-from fastapi.exceptions import HTTPException, RequestValidationError
-from starlette.exceptions import HTTPException as StarletteHTTPException
-from starlette.responses import PlainTextResponse, JSONResponse
 from common.response import res_bad_request, res_error
 from component.ConfigManager import config_manager
 
 # 启动 FastAPI http 服务器
 from component.LogManager import log_manager
+from fastapi import FastAPI, Request
+from fastapi.exceptions import HTTPException, RequestValidationError
 from router import RegisterRouterList
+from starlette.exceptions import HTTPException as StarletteHTTPException
+from starlette.responses import JSONResponse, PlainTextResponse
 
 logger = log_manager.get_logger("app")
 

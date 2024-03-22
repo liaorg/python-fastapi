@@ -1,9 +1,8 @@
-from uvicorn import run
-from common.path import ROOT_DIR
-from component.ConfigManager import config_manager
-
 # 导入应用模块
 from app import app
+from common.path import ROOT_DIR
+from component.ConfigManager import config_manager
+from uvicorn import run
 
 SRC_FOLDER = ROOT_DIR / 'src'
 

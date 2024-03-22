@@ -2,7 +2,6 @@
   "recommendations": [
     "ms-ceintl.vscode-language-pack-zh-hans",
     "eamodio.gitlens",
-    "christian-kohler.path-intellisense",
     "alefragnani.bookmarks",
     "vscode-icons-team.vscode-icons",
     "ms-vscode-remote.vscode-remote-extensionpack",
@@ -10,9 +9,14 @@
     "mgmcdermott.vscode-language-babel",
     "zhuangtongfa.material-theme",
     "ms-vscode.hexeditor",
-    "ms-python.python",
-    "ms-python.black-formatter",
     "tamasfe.even-better-toml",
-    "aaron-bond.better-comments"
+    "aaron-bond.better-comments",
+    "njpwerner.autodocstring",
+    "ms-python.black-formatter",
+    "ms-python.python",
+    "ms-python.debugpy",
+    "ms-python.vscode-pylance",
+    "donjayamanne.python-environment-manager",
+    "charliermarsh.ruff"
   ]
 }

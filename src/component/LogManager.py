@@ -1,5 +1,6 @@
 import logging
 import sys
+
 from component.ConfigManager import config_manager
 
 

@@ -1,9 +1,9 @@
 from enum import Enum
-from typing import Union, Optional, List, Dict
-from typing_extensions import Annotated
+from typing import Dict, List, Optional, Union
 
 # 导入pydantic对应的模型基类
-from pydantic import BaseModel, constr, EmailStr, conint, Field, field_validator
+from pydantic import BaseModel, EmailStr, Field, conint, constr, field_validator
+from typing_extensions import Annotated
 
 
 class DemoParam(BaseModel):

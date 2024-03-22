@@ -1,6 +1,7 @@
+from typing import Union
+
 from fastapi import status
 from fastapi.responses import JSONResponse, Response
-from typing import Union
 
 
 def res_ok(*, data: Union[list, dict, str, int, None] = None) -> Response:

@@ -1,11 +1,10 @@
 import traceback
 
+from custom_types import response
 from fastapi import status
 from fastapi.encoders import jsonable_encoder
 from fastapi.requests import Request
 from fastapi.responses import JSONResponse
-
-from custom_types import response
 
 
 async def appExceptionHandler(request: Request, exc: Exception):

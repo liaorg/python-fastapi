@@ -1,9 +1,10 @@
-from fastapi import FastAPI
 from config import appSettings
+from fastapi import FastAPI
 from middleware.jwt_middleware import JwtMiddleware
-from .usetime_middleware import UseTimeMiddleware
-from .token_middleware import TokenMiddleware
+
 from .test_middleware import TestMiddleware
+from .token_middleware import TokenMiddleware
+from .usetime_middleware import UseTimeMiddleware
 
 # 统一注册中间件方法
 # 中间件的执行顺序和注册顺序，正好是相反的；先注册的后执行

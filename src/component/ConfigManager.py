@@ -1,8 +1,9 @@
+from typing import Any, Dict, List
+
 import yaml
-from common.path import ROOT_DIR
 from common.env import ENV
+from common.path import ROOT_DIR
 from common.util import deep_merge_dict
-from typing import Any, List, Dict
 
 CONFIG_FOLDER = ROOT_DIR / 'res'
 BASE_CONFIG_FILE = CONFIG_FOLDER / 'config.yml'

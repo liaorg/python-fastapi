@@ -1,9 +1,8 @@
+from custom_types import response
 from fastapi import status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException
-
-from custom_types import response
 
 
 async def httpExceptionHandler(request, exc: HTTPException) -> JSONResponse:

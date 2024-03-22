@@ -1,10 +1,9 @@
+from config import keyErrorChineseDict, validateChineseDict
+from custom_types import response
 from fastapi import Request, status
+from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
-from config import validateChineseDict, keyErrorChineseDict, validateChineseDict
-from custom_types import response
-
-from fastapi.encoders import jsonable_encoder
 
 
 async def validationExceptionHandler(request: Request, exc: RequestValidationError):

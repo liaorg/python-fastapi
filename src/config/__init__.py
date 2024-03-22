@@ -1,11 +1,11 @@
+import argparse
 import os
 from functools import lru_cache
-import argparse
 
 from dotenv import load_dotenv
 
-from .validate_template_config import validateChineseDict, keyErrorChineseDict
 from .app_config import *
+from .validate_template_config import keyErrorChineseDict, validateChineseDict
 
 
 @lru_cache

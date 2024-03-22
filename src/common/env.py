@@ -1,8 +1,8 @@
 # 处理环境变量
 
-import sys
-import os
 import getopt
+import os
+import sys
 from typing import Any
 
 ENV: Any = None
