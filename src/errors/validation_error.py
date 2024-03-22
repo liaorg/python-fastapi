@@ -19,14 +19,7 @@ async def validationExceptionHandler(request: Request, exc: RequestValidationErr
                 errMsg += translateMsg
         else:
             # 不在定义模型，显示原始错误
-            errMsg += (
-                ".".join(error.get("loc"))
-                + "["
-                + error.get("type")
-                + "]:"
-                + error.get("msg")
-                + "; "
-            )
+            errMsg += ".".join(error.get("loc")) + "[" + error.get("type") + "]:" + error.get("msg") + "; "
 
     # 替换body.
     errMsg = errMsg.replace("body.", "")
@@ -47,5 +40,5 @@ def translate(fieldName: str, errType: str, limitDict: dict) -> str:
     limitValList = limitDict.values()
     try:
         return validateChineseDict.get(errType).format(fieldName, *limitValList)  # type: ignore
-    except Exception as e:
+    except Exception:
         return ""

@@ -12,11 +12,11 @@
     "tamasfe.even-better-toml",
     "aaron-bond.better-comments",
     "njpwerner.autodocstring",
-    "ms-python.black-formatter",
     "ms-python.python",
-    "ms-python.debugpy",
     "ms-python.vscode-pylance",
-    "donjayamanne.python-environment-manager",
-    "charliermarsh.ruff"
+    "ms-python.black-formatter",
+    "charliermarsh.ruff",
+    "ms-python.debugpy",
+    "donjayamanne.python-environment-manager"
   ]
 }

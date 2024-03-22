@@ -18,9 +18,7 @@ async def httpExceptionHandler(request, exc: HTTPException) -> JSONResponse:
     elif exc.status_code == status.HTTP_405_METHOD_NOT_ALLOWED:
         # 处理405错误
         return JSONResponse(
-            content=jsonable_encoder(
-                response.ResponseFail("请求方式错误，请查看文档确认~")
-            ),
+            content=jsonable_encoder(response.ResponseFail("请求方式错误，请查看文档确认~")),
             status_code=status.HTTP_200_OK,
         )
     else:

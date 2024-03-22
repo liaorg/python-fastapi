@@ -1,10 +1,10 @@
 from fastapi import FastAPI
-
-from .validation_error import validationExceptionHandler
-from .http_error import httpExceptionHandler
-from .app_error import appExceptionHandler
 from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
+
+from .app_error import appExceptionHandler
+from .http_error import httpExceptionHandler
+from .validation_error import validationExceptionHandler
 
 
 def registerCustomErrorHandle(server: FastAPI):
